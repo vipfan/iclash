@@ -49,8 +49,10 @@ dns:
     - '*.blzstatic.cn'
     - '*.battle.net'
 
+#本地代理
+proxies:
 
-
+#远程订阅
 proxy-providers:
   All:
     type: http
