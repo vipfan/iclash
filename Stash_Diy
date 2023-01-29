@@ -66,15 +66,14 @@ proxy-providers:
       url: http://cp.cloudflare.com/generate_204
       
 proxy-groups:
-
-	- icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Auto.png
-	  include-all: true
-	  interval: 120
-	  lazy: true
-	  name: Auto-Select
-	  tolerance: 50
-	  type: url-test
-	  url: http://cp.cloudflare.com/generate_204
+  - icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Auto.png
+    include-all: true
+    interval: 120
+    lazy: true
+    name: Auto-Select
+    tolerance: 50
+    type: url-test
+    url: http://cp.cloudflare.com/generate_204
 
 	- icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Rocket.png
 	  include-all: true
