@@ -67,23 +67,14 @@ proxy-providers:
       
 proxy-groups:
 
-
-  - name: Domestic
-    type: select
-    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/China_Map.png
-    proxies: 
-      - DIRECT
-      - Auto-Select
-      
-- icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Auto.png
-  include-all: true
-  interval: 120
-  lazy: true
-  name: Auto-Select
-  tolerance: 50
-  type: url-test
-  url: http://cp.cloudflare.com/generate_204
-
+	- icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Auto.png
+	  include-all: true
+	  interval: 120
+	  lazy: true
+	  name: Auto-Select
+	  tolerance: 50
+	  type: url-test
+	  url: http://cp.cloudflare.com/generate_204
 
 
 #远程规则集合
