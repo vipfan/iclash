@@ -216,9 +216,13 @@ rules:
   - RULE-SET,Twitter,国外网站
   - RULE-SET,Facebook,国外网站
   - RULE-SET,Instagram,国外网站
-  - RULE-SET,Streaming,国外网站  
-  - RULE-SET,China,国内网站  
+  - RULE-SET,GlobalMedia,国外网站
+  - RULE-SET,GlobalMedia_Domain,国外网站
   - RULE-SET,Global,国外网站
-
+  - RULE-SET,Global_Domain,国外网站
+  - RULE-SET,China,国内网站
+  - RULE-SET,China_Domain,国内网站
+  - RULE-SET,ChinaIPs,国内网站
+  
   - GEOIP,CN,国内网站
   - MATCH,国外网站
