@@ -73,49 +73,49 @@ proxy-groups:
     type: select
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Hong_Kong.png
     use:
-      - All
+      - All-Proxy
     filter: 港|🇭🇰|HK|(?i)Hong
 
   - name: 台湾节点
     type: select
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Taiwan.png
     use:
-      - All
+      - All-Proxy
     filter: 台|🇹🇼|TW|(?i)Taiwan
     
   - name: 日本节点
     type: select
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Japan.png
     use:
-      - All
+      - All-Proxy
     filter: 日|🇯🇵|JP|(?i)Japan
      
   - name: 狮城节点
     type: select
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Singapore.png
     use:
-      - All
+      - All-Proxy
     filter: 坡|🇸🇬|狮城|SG|(?i)Singapore
      
   - name: 韩国节点
     type: select
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Korea.png
     use:
-      - All
+      - AAll-Proxy
     filter: 韩|🇰🇷|韓|KR|KOR|(?i)Korea
     
   - name: 美国节点
     type: select
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/United_States.png
     use:
-      - All
+      - All-Proxy
     filter: 美|🇺🇸|US|(?i)States|American
 
   - name: 其他节点
     type: select
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Server.png
     use:
-      - All
+      - All-Proxy
     filter: ^((?!香港|HK|Hong Kong|台湾|TW|TaiWan|新加坡|SG|Singapore|日本|JP|Japan|韩国|KR|KOR|Korea|美国|US|States|American|Music).)*$,
     
     
