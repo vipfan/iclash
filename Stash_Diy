@@ -68,3 +68,12 @@ proxy-providers:
       
 
 
+
+#远程规则集合
+rule-providers:
+    
+  Netflix-rules:
+    behavior: classical
+    interval: 86400
+    name: Netflix
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/release/rule/Clash/Netflix/Netflix.yaml
