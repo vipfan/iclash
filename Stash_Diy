@@ -19,6 +19,7 @@ subscribe-url: 你的订阅链接
 #DNS设置
 dns:
   enable: true
+  ipv6: false
   listen: 0.0.0.0:1053
   #DNS服务器
   default-nameserver:
