@@ -76,7 +76,7 @@ proxy-groups:
       - DIRECT
       - Auto-Select
 
-  - name: Global
+  - name: Auto-Proxy
     type: select
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Global.png
     proxies: 
@@ -129,7 +129,7 @@ proxy-groups:
     type: select
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Korea.png
     use:
-      - AAll-Proxy
+      - All-Proxy
     filter: 韩|🇰🇷|韓|KR|KOR|(?i)Korea
     
   - name: US-Proxy
@@ -292,20 +292,20 @@ rules:
   - RULE-SET,Privacy,REJECT
   - RULE-SET,Privacy_Domain,REJECT
   - RULE-SET,Hijacking,REJECT
-  - RULE-SET,Apple,国内网站
-  - RULE-SET,Telegram,国外网站
-  - RULE-SET,YouTube,国外网站
-  - RULE-SET,Google,国外网站
-  - RULE-SET,Twitter,国外网站
-  - RULE-SET,Facebook,国外网站
-  - RULE-SET,Instagram,国外网站
-  - RULE-SET,GlobalMedia,国外网站
-  - RULE-SET,GlobalMedia_Domain,国外网站
-  - RULE-SET,Global,国外网站
-  - RULE-SET,Global_Domain,国外网站
-  - RULE-SET,China,国内网站
-  - RULE-SET,China_Domain,国内网站
-  - RULE-SET,ChinaIPs,国内网站
+  - RULE-SET,Apple,Domestic
+  - RULE-SET,Telegram,Auto-Proxy
+  - RULE-SET,YouTube,Manual-Select
+  - RULE-SET,Google,Manual-Select
+  - RULE-SET,Twitter,Manual-Select
+  - RULE-SET,Facebook,Manual-Select
+  - RULE-SET,Instagram,Manual-Select
+  - RULE-SET,GlobalMedia,Manual-Select
+  - RULE-SET,GlobalMedia_Domain,Manual-Select
+  - RULE-SET,Global,Manual-Select
+  - RULE-SET,Global_Domain,Manual-Select
+  - RULE-SET,China,Domestic
+  - RULE-SET,China_Domain,Domestic
+  - RULE-SET,ChinaIPs,Domestic
   
-  - GEOIP,CN,国内网站
-  - MATCH,国外网站
+  - GEOIP,CN,Domestic
+  - MATCH,Auto-Proxy
