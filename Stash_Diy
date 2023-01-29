@@ -75,27 +75,27 @@ proxy-groups:
     type: url-test
     url: http://cp.cloudflare.com/generate_204
 
-	- icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Rocket.png
-	  include-all: true
-	  interval: 120
-	  lazy: true
-	  name: Manual-Select
-	  type: select
-	  url: http://cp.cloudflare.com/generate_204
+  - icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Rocket.png
+    include-all: true
+    interval: 120
+    lazy: true
+    name: Manual-Select
+    type: select
+    url: http://cp.cloudflare.com/generate_204
 
-	- icon: https://fastly.jsdelivr.net/gh/Koolson/Qure/IconSet/mini/Proxy.png
-	  name: Auto-Proxy
-	  proxies:
-	  - Auto-Select
-	  - HK 香港
-	  - TW 台湾
-	  - SG 新加坡
-	  - KR 韩国
-	  - JP 日本
-	  - US 美国
-	  - OTHER 其它
-	  - DIRECT
-	  type: select
+  - icon: https://fastly.jsdelivr.net/gh/Koolson/Qure/IconSet/mini/Proxy.png
+    name: Auto-Proxy
+    proxies:
+      - Auto-Select
+      - HK 香港
+      - TW 台湾
+      - SG 新加坡
+      - KR 韩国
+      - JP 日本
+      - US 美国
+      - OTHER 其它
+      - DIRECT
+    type: select
 
 	- icon: https://fastly.jsdelivr.net/gh/Koolson/Qure/IconSet/mini/Final.png
 	  name: Domestic
