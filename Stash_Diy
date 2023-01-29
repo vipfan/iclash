@@ -1,6 +1,3 @@
-subscribe-url: 你的订阅链接
-# 替换上面文字用于Stash获取机场流量信息并在主页显示
-
 #混合端口
 mixed-port: 7890
 #允许局域网
@@ -14,3 +11,22 @@ log-level: info
 ipv6: false
 #外部控制器
 external-controller: 127.0.0.1:9090
+
+subscribe-url: 你的订阅链接
+# 替换上面文字用于Stash获取机场流量信息并在主页显示
+
+proxy-providers:
+  All:
+    type: http
+    url: "https://sub.store/download/collection/AllServer"
+    # 使用Clash类型订阅链接替换掉引号""内的链接使用。
+    # 或可使用通用订阅链接通过Sub-Store进行订阅转换。
+    interval: 86400
+    path: ./all.yaml
+    health-check:
+      enable: true
+      interval: 600
+      url: http://cp.cloudflare.com/generate_204
+      
+
+
