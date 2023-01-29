@@ -68,7 +68,7 @@ proxy-providers:
       
 proxy-groups:
 
-  - name: 自动选择
+  - name: Auto-Select
     type: url-test
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Auto.png
     use: 
@@ -76,49 +76,49 @@ proxy-groups:
     url: "http://www.gstatic.com/generate_204"
     interval: 300
 
-  - name: 香港节点
+  - name: HK-Proxy
     type: select
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Hong_Kong.png
     use:
       - All-Proxy
     filter: 港|🇭🇰|HK|(?i)Hong
 
-  - name: 台湾节点
+  - name: TW-Proxy
     type: select
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Taiwan.png
     use:
       - All-Proxy
     filter: 台|🇹🇼|TW|(?i)Taiwan
     
-  - name: 日本节点
+  - name: JP-Proxy
     type: select
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Japan.png
     use:
       - All-Proxy
     filter: 日|🇯🇵|JP|(?i)Japan
      
-  - name: 狮城节点
+  - name: SG-Proxy
     type: select
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Singapore.png
     use:
       - All-Proxy
     filter: 坡|🇸🇬|狮城|SG|(?i)Singapore
      
-  - name: 韩国节点
+  - name: KR-Proxy
     type: select
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Korea.png
     use:
       - AAll-Proxy
     filter: 韩|🇰🇷|韓|KR|KOR|(?i)Korea
     
-  - name: 美国节点
+  - name: US-Proxy
     type: select
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/United_States.png
     use:
       - All-Proxy
     filter: 美|🇺🇸|US|(?i)States|American
 
-  - name: 其他节点
+  - name: Other-Proxy
     type: select
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Server.png
     use:
