@@ -117,47 +117,53 @@ rule-providers:
   Apple:
     behavior: classical
     interval: 86400
-    name: Apple    
+    name: Apple
     url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Apple/Apple.yaml
     
   Telegram:
     behavior: classical
     interval: 86400
-    name: Telegram    
+    name: Telegram
     url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Telegram/Telegram.yaml
     
   YouTube:
     behavior: classical
     interval: 86400
-    name: YouTube    
+    name: YouTube
     url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/YouTube/YouTube.yaml
     
   Google:
     behavior: classical
     interval: 86400
-    name: Google   
+    name: Google
     url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Google/Google.yaml
     
   Twitter:
     behavior: classical
     interval: 86400
-    name: Twitter   
+    name: Twitter
     url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Twitter/Twitter.yaml
     
   Facebook:
     behavior: classical
     interval: 86400
-    name: Facebook   
+    name: Facebook
     url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Facebook/Facebook.yaml
     
   Instagram:
     behavior: classical
     interval: 86400
-    name: Instagram   
+    name: Instagram
     url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Instagram/Instagram.yaml
     
   GlobalMedia:
     behavior: classical
     interval: 86400
-    name: GlobalMedia   
+    name: GlobalMedia
     url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/GlobalMedia/GlobalMedia.yaml
+    
+  GlobalMedia_Domain:
+    behavior: domain
+    interval: 86400
+    name: GlobalMedia_Domain
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/GlobalMedia/GlobalMedia_Domain.yaml
