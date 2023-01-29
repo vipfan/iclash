@@ -97,23 +97,23 @@ proxy-groups:
       - DIRECT
     type: select
 
-	- icon: https://fastly.jsdelivr.net/gh/Koolson/Qure/IconSet/mini/Final.png
-	  name: Domestic
-	  proxies:
-	  - DIRECT
-	  - Auto-Select
-	  type: select
+  - icon: https://fastly.jsdelivr.net/gh/Koolson/Qure/IconSet/mini/Final.png
+    name: Domestic
+    proxies:
+      - DIRECT
+      - Auto-Select
+    type: select
 
 
-	- filter: "港|\U0001F1ED\U0001F1F0|HK|(?i)Hong"
-	  icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Hong_Kong.png
-	  include-all: true
-	  interval: 120
-	  lazy: true
-	  name: HK 香港
-	  tolerance: 50
-	  type: url-test
-	  url: http://cp.cloudflare.com/generate_204
+  - filter: "港|\U0001F1ED\U0001F1F0|HK|(?i)Hong"
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Hong_Kong.png
+    include-all: true
+    interval: 120
+    lazy: true
+    name: HK 香港
+    tolerance: 50
+    type: url-test
+    url: http://cp.cloudflare.com/generate_204
 
 	- filter: "台|\U0001F1E8\U0001F1F3|\U0001F1F9\U0001F1FC|湾|TW|(?i)Taiwan"
 	  icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Taiwan.png
