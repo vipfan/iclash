@@ -68,6 +68,21 @@ proxy-providers:
       
 proxy-groups:
 
+
+  - name: Domestic
+    type: select
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/China_Map.png
+    proxies: 
+      - DIRECT
+      - Auto-Select
+
+  - name: Global
+    type: select
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/China_Map.png
+    proxies: 
+      - Auto-Select
+      - DIRECT
+
   - name: Manual-Select
     type: select
     use:
