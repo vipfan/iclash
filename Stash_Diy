@@ -202,9 +202,12 @@ rule-providers:
     
 rules:
   # 分流规则引用
-  - RULE-SET,Unbreak,DIRECT
-  - RULE-SET,Adblock,REJECT
+  - RULE-SET,Lan,DIRECT
+  - RULE-SET,Direct,DIRECT
+  - RULE-SET,AdvertisingLite,REJECT
+  - RULE-SET,AdvertisingLite_Domain,REJECT
   - RULE-SET,Privacy,REJECT
+  - RULE-SET,Privacy_Domain,REJECT
   - RULE-SET,Hijacking,REJECT
   - RULE-SET,Apple,国内网站
   - RULE-SET,Google,国外网站  
@@ -217,6 +220,6 @@ rules:
   - RULE-SET,Streaming,国外网站  
   - RULE-SET,China,国内网站  
   - RULE-SET,Global,国外网站
-  - RULE-SET,Lan,DIRECT
+
   - GEOIP,CN,国内网站
   - MATCH,国外网站
