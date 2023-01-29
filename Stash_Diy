@@ -136,44 +136,44 @@ proxy-groups:
     url: http://cp.cloudflare.com/generate_204
 
   - filter: "日|\U0001F1EF\U0001F1F5|东京|JP|(?i)Japan"
-	  icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Japan.png
-	  include-all: true
-	  interval: 120
-	  lazy: true
-	  name: JP 日本
-	  tolerance: 50
-	  type: url-test
-	  url: http://cp.cloudflare.com/generate_204
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Japan.png
+    include-all: true
+    interval: 120
+    lazy: true
+    name: JP 日本
+    tolerance: 50
+    type: url-test
+    url: http://cp.cloudflare.com/generate_204
 
   - filter: "韩|🇰🇷|韓|KR|KOR|(?i)Korea"
-	  icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Korea.png
-	  include-all: true
-	  interval: 120
-	  lazy: true
-	  name: KR 韩国
-	  tolerance: 50
-	  type: url-test
-	  url: http://cp.cloudflare.com/generate_204
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Korea.png
+    include-all: true
+    interval: 120
+    lazy: true
+    name: KR 韩国
+    tolerance: 50
+    type: url-test
+    url: http://cp.cloudflare.com/generate_204
 
   - filter: "美|\U0001F1FA\U0001F1F2|US|(?i)States|American"
-	  icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/United_States.png
-	  include-all: true
-	  interval: 120
-	  lazy: true
-	  name: US 美国
-	  tolerance: 50
-	  type: url-test
-	  url: http://cp.cloudflare.com/generate_204
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/United_States.png
+    include-all: true
+    interval: 120
+    lazy: true
+    name: US 美国
+    tolerance: 50
+    type: url-test
+    url: http://cp.cloudflare.com/generate_204
 
   - filter: ^((?!香港|HK|Hong Kong|台湾|TW|TaiWan|新加坡|SG|Singapore|日本|JP|Japan|韩国|KR|KOR|Korea|美国|US|States|American|Music).)*$,
-	  icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Server.png
-	  include-all: true
-	  interval: 120
-	  lazy: true
-	  name: OTHER 其它
-	  tolerance: 50
-	  type: url-test
-	  url: http://cp.cloudflare.com/generate_204
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Server.png
+    include-all: true
+    interval: 120
+    lazy: true
+    name: OTHER 其它
+    tolerance: 50
+    type: url-test
+    url: http://cp.cloudflare.com/generate_204
 
 
 #远程规则集合
