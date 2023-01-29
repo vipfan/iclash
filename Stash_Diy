@@ -68,6 +68,12 @@ proxy-providers:
       
 proxy-groups:
 
+  - name: Manual-Select
+    type: select
+    use:
+      - All-Proxy
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Rocket.png
+
   - name: Auto-Select
     type: url-test
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Auto.png
