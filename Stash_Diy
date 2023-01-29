@@ -210,13 +210,12 @@ rules:
   - RULE-SET,Privacy_Domain,REJECT
   - RULE-SET,Hijacking,REJECT
   - RULE-SET,Apple,国内网站
-  - RULE-SET,Google,国外网站  
-  - RULE-SET,Microsoft,国内网站
-  - RULE-SET,WeChat,国内网站
   - RULE-SET,Telegram,国外网站
-  - RULE-SET,Twitter,国外网站  
   - RULE-SET,YouTube,国外网站
-  - RULE-SET,TikTok,国外网站  
+  - RULE-SET,Google,国外网站
+  - RULE-SET,Twitter,国外网站
+  - RULE-SET,Facebook,国外网站
+  - RULE-SET,Instagram,国外网站
   - RULE-SET,Streaming,国外网站  
   - RULE-SET,China,国内网站  
   - RULE-SET,Global,国外网站
