@@ -74,81 +74,16 @@ proxy-groups:
     proxies: 
       - DIRECT
       - Auto-Select
+      
+- icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Auto.png
+  include-all: true
+  interval: 120
+  lazy: true
+  name: Auto-Select
+  tolerance: 50
+  type: url-test
+  url: http://cp.cloudflare.com/generate_204
 
-  - name: Auto-Proxy
-    type: select
-    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Global.png
-    proxies: 
-      - Auto-Select
-      - DIRECT
-
-  - name: Manual-Select
-    type: select
-    use:
-      - All-Proxy
-    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Rocket.png
-
-  - name: Auto-Select
-    type: url-test
-    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Auto.png
-    use: 
-       - All-Proxy
-    url: "http://www.gstatic.com/generate_204"
-    interval: 300
-
-  - name: HK-Proxy
-    type: select
-    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Hong_Kong.png
-    use:
-      - All-Proxy
-    filter: "港|\U0001F1ED\U0001F1F0|HK|(?i)Hong"
-
-  - name: TW-Proxy
-    type: select
-    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Taiwan.png
-    use:
-      - All-Proxy
-    filter: 台|🇹🇼|TW|(?i)Taiwan
-    
-  - name: JP-Proxy
-    type: select
-    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Japan.png
-    use:
-      - All-Proxy
-    filter: 日|🇯🇵|JP|(?i)Japan
-     
-  - name: SG-Proxy
-    type: select
-    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Singapore.png
-    use:
-      - All-Proxy
-    filter: 坡|🇸🇬|狮城|SG|(?i)Singapore
-     
-  - name: KR-Proxy
-    type: select
-    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Korea.png
-    use:
-      - All-Proxy
-    filter: 韩|🇰🇷|韓|KR|KOR|(?i)Korea
-    
-  - name: US-Proxy
-    type: select
-    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/United_States.png
-    use:
-      - All-Proxy
-    filter: 美|🇺🇸|US|(?i)States|American
-
-  - name: Other-Proxy
-    type: select
-    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Server.png
-    use:
-      - All-Proxy
-    filter: ^((?!香港|HK|Hong Kong|台湾|TW|TaiWan|新加坡|SG|Singapore|日本|JP|Japan|韩国|KR|KOR|Korea|美国|US|States|American|Music).)*$,
-    
-    
-    
-    
-    
 
 
 #远程规则集合
