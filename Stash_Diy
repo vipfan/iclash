@@ -1,8 +1,8 @@
-#混合端口
+# 混合端口，HTTP和SOCKS5用一个端口
 mixed-port: 7890
-#允许局域网
+# 允许局域网的连接（共享代理）
 allow-lan: true
-#绑定地址
+# 监听IP白名单，可绑定单个IPv4和v6地址，"*" 为绑定所有IP地址，仅在将allow-lan设置为true时适用
 bind-address: '*'
 #模式:rule（规则） / global（全局代理）/ direct（全局直连）
 mode: Rule
