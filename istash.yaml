@@ -48,7 +48,6 @@ dns:
     - '*.msftconnecttest.com'
     - '*.mcdn.bilivideo.cn'
 
-
 # TUN模式
 tun:
   enable: true
