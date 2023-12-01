@@ -293,7 +293,7 @@ rule-providers:
 rules:
   # 分流规则引用
   - RULE-SET,Lan,DIRECT
-  - RULE-SET,DirectRules,DIRECT
+  - RULE-SET,DirectRules,Domestic
   - RULE-SET,AdvertisingLite,REJECT
   - RULE-SET,AdvertisingLite_Domain,REJECT
   - RULE-SET,Privacy,REJECT
@@ -315,4 +315,4 @@ rules:
   - RULE-SET,ChinaIPs,Domestic
   
   - GEOIP,CN,Domestic
-  - MATCH,Auto-Proxy
+  - MATCH,AutoProxy
