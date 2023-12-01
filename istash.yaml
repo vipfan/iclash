@@ -92,10 +92,8 @@ proxy-groups:
   - icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Rocket.png
     include-all: true
     interval: 300
-    lazy: true
     name: ManualSelect
     type: select
-    url: http://cp.cloudflare.com/generate_204
 
   - icon: https://fastly.jsdelivr.net/gh/Koolson/Qure/IconSet/mini/Proxy.png
     name: AutoProxy
