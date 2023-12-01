@@ -295,10 +295,26 @@ rule-providers:
     url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/NetEase/NetEase.yaml
     path: ./ruleset/NetEase.yaml
 
+  Zhihu:
+    behavior: classical
+    interval: 86400
+    name: Zhihu
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Zhihu/Zhihu.yaml
+    path: ./ruleset/Zhihu.yaml
 
+  XiaoHongShu:
+    behavior: classical
+    interval: 86400
+    name: XiaoHongShu
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/XiaoHongShu/XiaoHongShu.yaml
+    path: ./ruleset/XiaoHongShu.yaml
 
-
-
+  DouBan:
+    behavior: classical
+    interval: 86400
+    name: DouBan
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/DouBan/DouBan.yaml
+    path: ./ruleset/DouBan.yaml
 
 
 
@@ -434,7 +450,9 @@ rules:
   - RULE-SET,Pinduoduo,Domestic
   - RULE-SET,Sina,Domestic
   - RULE-SET,NetEase,Domestic
-
+  - RULE-SET,Zhihu,Domestic
+  - RULE-SET,XiaoHongShu,Domestic
+  - RULE-SET,DouBan,Domestic
 
 
 
