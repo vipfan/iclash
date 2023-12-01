@@ -57,6 +57,20 @@ dns:
     - '*.msftconnecttest.com'
     - '*.mcdn.bilivideo.cn'
 
+
+# TUN模式
+tun:
+  enable: true
+  stack: gvisor
+  dns-hijack:
+    - 'any:53'
+  auto-route: true
+  auto-detect-interface: true
+
+
+
+
+
 # 本地代理
 proxies:
 
