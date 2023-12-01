@@ -217,6 +217,20 @@ rule-providers:
     name: BaiduTieba
     url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/BaiDuTieBa/BaiDuTieBa.yaml
     path: ./ruleset/BaiDuTieBa.yaml
+
+  WeChat:
+    behavior: classical
+    interval: 86400
+    name: WeChat
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/WeChat/WeChat.yaml
+    path: ./ruleset/WeChat.yaml
+
+
+
+
+
+
+
     
   Apple_Domain:
     behavior: domain
@@ -338,6 +352,7 @@ rules:
 
   - RULE-SET,Baidu,Domestic
   - RULE-SET,BaiduTieba,Domestic
+  - RULE-SET,WeChat,Domestic
 
 
   
