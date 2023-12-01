@@ -57,6 +57,14 @@ tun:
   auto-route: true
   auto-detect-interface: true
 
+# ——————锚点——————
+# 节点筛选相关url-test
+u: &u {type: url-test, include-all: true, interval: 300, lazy: true, tolerance: 50, url: http://cp.cloudflare.com/generate_204}
+
+
+
+
+
 
 
 # 本地代理
@@ -78,7 +86,7 @@ proxy-providers:
 proxy-groups:
   - icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Auto.png
     include-all: true
-    interval: 120
+    interval: 300
     lazy: true
     name: AutoSelect
     tolerance: 50
@@ -87,7 +95,7 @@ proxy-groups:
 
   - icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Rocket.png
     include-all: true
-    interval: 120
+    interval: 300
     lazy: true
     name: ManualSelect
     type: select
@@ -154,6 +162,8 @@ proxy-groups:
     tolerance: 50
     type: url-test
     url: http://cp.cloudflare.com/generate_204
+
+    
 
   - filter: "韩|🇰🇷|韓|KR|KOR|(?i)Korea"
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Korea.png
