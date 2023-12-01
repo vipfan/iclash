@@ -1,16 +1,17 @@
 # 混合端口，HTTP和SOCKS5用一个端口
-mixed-port: 7890
-# 允许局域网的连接（共享代理）
-allow-lan: true
-# 监听IP白名单，可绑定单个IPv4和v6地址，"*" 为绑定所有IP地址，仅在将allow-lan设置为true时适用
-bind-address: '*'
-# 模式:rule（规则） / global（全局代理）/ direct（全局直连）
-mode: Rule
-# 日志级别（日志输出级别：分级如后silent / info / warning / error / debug级别越高日志输出量越大）
-log-level: info
-ipv6: true
-# 外部控制器， 可以使用 RESTful API 来控制你的 clash 内核
-external-controller: 127.0.0.1:9090
+mixed-port: 7890                     # 混合端口，HTTP和SOCKS5用一个端口
+allow-lan: true                      # 允许局域网的连接（共享代理）
+bind-address: "*"                    # 监听IP白名单，可绑定单个IPv4和v6地址，"*" 为绑定所有IP地址，仅在将allow-lan设置为true时适用
+ipv6: true                           # 开启 IPv6 总开关，关闭阻断所有 IPv6 链接和屏蔽 DNS 请求 AAAA 记录
+mode: rule                           # 规则模式：rule（规则） / global（全局代理）/ direct（全局直连）/ script (脚本)
+log-level: info                      # 设置日志输出级别 (5 个级别：silent / error / warning / info / debug）
+
+external-controller: 127.0.0.1:9090  # 外部控制器监听地址，可以使用 RESTful API 来控制你的 clash 内核
+
+
+
+
+
 
 # subscribe-url: 你的订阅链接
 # 替换上面文字用于Stash获取机场流量信息并在主页显示
