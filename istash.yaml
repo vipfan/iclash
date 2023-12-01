@@ -60,17 +60,16 @@ tun:
 
 
 
-
-
 # 本地代理
 proxies:
 
 # 远程订阅
 proxy-providers:
-  All-Proxy:
+  AllProxy:
     url: "https://sub.store/download/collection/AllServer"
     # 使用Clash类型订阅链接替换掉引号""内的链接使用;或可使用通用订阅链接通过Sub-Store进行订阅转换。
     interval: 42300
+    path: ./proxy_providers/AllProxy.yaml
     # filter: '节点关键词'
     health-check:
       enable: true
