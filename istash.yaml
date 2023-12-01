@@ -1,0 +1,337 @@
+# 混合端口，HTTP和SOCKS5用一个端口
+mixed-port: 7890                     # 混合端口，HTTP和SOCKS5用一个端口
+allow-lan: true                      # 允许局域网的连接（共享代理）
+bind-address: "*"                    # 监听IP白名单，可绑定单个IPv4和v6地址，"*" 为绑定所有IP地址，仅在将allow-lan设置为true时适用
+ipv6: true                           # 开启 IPv6 总开关，关闭阻断所有 IPv6 链接和屏蔽 DNS 请求 AAAA 记录
+mode: rule                           # 规则模式：rule（规则） / global（全局代理）/ direct（全局直连）/ script (脚本)
+log-level: info                      # 设置日志输出级别 (5 个级别：silent / error / warning / info / debug）
+
+external-controller: 127.0.0.1:9090  # 外部控制器监听地址，可以使用 RESTful API 来控制你的 clash 内核
+
+
+
+
+
+
+# subscribe-url: 你的订阅链接
+# 替换上面文字用于Stash获取机场流量信息并在主页显示
+
+
+# DNS设置
+dns:
+  enable: true
+  ipv6: true
+  listen: 0.0.0.0:1053
+  # DNS服务器
+  default-nameserver:
+    - system
+    - 119.29.29.29
+    - 223.5.5.5
+    - 114.114.114.114
+  # DoH服务器
+  nameserver:
+    - https://dns.alidns.com/dns-query
+    - https://doh.pub/dns-query
+  # 模式：redir-host或fake-ip
+  enhanced-mode: fake-ip
+  # Fake-IP 解析地址池
+  fake-ip-range: 198.18.0.1/16
+  #列表中的域名将不会被解析为fake ip，这些域名相关的解析请求将会返回它们真实的IP地址
+  fake-ip-filter:
+    - '*.lan'
+    - localhost.ptlogin2.qq.com
+    - '*.battle.net'
+    - '*.blzstatic.cn'
+    - '*.battlenet.com'
+    - '*.battlenet.com.cn'
+    - 'lens.l.google.com'
+    - '+.srv.nintendo.net'
+    - '+.stun.playstation.net'
+    - '+.msftncsi.com'
+    - '+.xboxlive.com'
+    - 'msftconnecttest.com'
+    - 'xbox.*.*.microsoft.com'
+    - 'xbox.*.microsoft.com'         
+    - '+.msftconnecttest.com'
+    - '*.msftncsi.com'
+    - '*.msftconnecttest.com'
+    - '*.mcdn.bilivideo.cn'
+
+# 本地代理
+proxies:
+
+# 远程订阅
+proxy-providers:
+  All-Proxy:
+    url: "https://sub.store/download/collection/AllServer"
+    # 使用Clash类型订阅链接替换掉引号""内的链接使用;或可使用通用订阅链接通过Sub-Store进行订阅转换。
+    interval: 86400
+    # filter: '节点关键词'
+    health-check:
+      enable: true
+      interval: 3600
+      url: http://cp.cloudflare.com/generate_204
+      
+proxy-groups:
+  - icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Auto.png
+    include-all: true
+    interval: 120
+    lazy: true
+    name: Auto-Select
+    tolerance: 50
+    type: url-test
+    url: http://cp.cloudflare.com/generate_204
+
+  - icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Rocket.png
+    include-all: true
+    interval: 120
+    lazy: true
+    name: Manual-Select
+    type: select
+    url: http://cp.cloudflare.com/generate_204
+
+  - icon: https://fastly.jsdelivr.net/gh/Koolson/Qure/IconSet/mini/Proxy.png
+    name: Auto-Proxy
+    proxies:
+      - Auto-Select
+      - HK 香港
+      - TW 台湾
+      - SG 新加坡
+      - KR 韩国
+      - JP 日本
+      - US 美国
+      - OTHER 其它
+      - DIRECT
+    type: select
+
+  - icon: https://fastly.jsdelivr.net/gh/Koolson/Qure/IconSet/mini/Final.png
+    name: Domestic
+    proxies:
+      - DIRECT
+      - Auto-Select
+    type: select
+
+
+  - filter: "港|\U0001F1ED\U0001F1F0|HK|(?i)Hong"
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Hong_Kong.png
+    include-all: true
+    interval: 120
+    lazy: true
+    name: HK 香港
+    tolerance: 50
+    type: url-test
+    url: http://cp.cloudflare.com/generate_204
+
+  - filter: "台|\U0001F1E8\U0001F1F3|\U0001F1F9\U0001F1FC|湾|TW|(?i)Taiwan"
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Taiwan.png
+    include-all: true
+    interval: 120
+    lazy: true
+    name: TW 台湾
+    tolerance: 50
+    type: url-test
+    url: http://cp.cloudflare.com/generate_204
+
+  - filter: "新加坡|坡|狮城|\U0001F1F8\U0001F1EC|SG|(?i)Singapore"
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Singapore.png
+    include-all: true
+    interval: 120
+    lazy: true
+    name: SG 新加坡
+    tolerance: 50
+    type: url-test
+    url: http://cp.cloudflare.com/generate_204
+
+  - filter: "日|\U0001F1EF\U0001F1F5|东京|JP|(?i)Japan"
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Japan.png
+    include-all: true
+    interval: 120
+    lazy: true
+    name: JP 日本
+    tolerance: 50
+    type: url-test
+    url: http://cp.cloudflare.com/generate_204
+
+  - filter: "韩|🇰🇷|韓|KR|KOR|(?i)Korea"
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Korea.png
+    include-all: true
+    interval: 120
+    lazy: true
+    name: KR 韩国
+    tolerance: 50
+    type: url-test
+    url: http://cp.cloudflare.com/generate_204
+
+  - filter: "美|\U0001F1FA\U0001F1F2|US|(?i)States|American"
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/United_States.png
+    include-all: true
+    interval: 120
+    lazy: true
+    name: US 美国
+    tolerance: 50
+    type: url-test
+    url: http://cp.cloudflare.com/generate_204
+
+  - filter: ^((?!香港|HK|Hong Kong|台湾|TW|TaiWan|新加坡|SG|Singapore|日本|JP|Japan|韩国|KR|KOR|Korea|美国|US|States|American|Music).)*$,
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Server.png
+    include-all: true
+    interval: 120
+    lazy: true
+    name: OTHER 其它
+    tolerance: 50
+    type: url-test
+    url: http://cp.cloudflare.com/generate_204
+
+
+#远程规则集合
+rule-providers:
+    
+  Lan:
+    behavior: classical
+    interval: 86400
+    name: Lan
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Lan/Lan.yaml
+
+  Direct:
+    behavior: classical
+    interval: 86400
+    name: Direct
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Direct/Direct.yaml
+    
+  AdvertisingLite:
+    behavior: classical
+    interval: 86400
+    name: AdvertisingLite
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/AdvertisingLite/AdvertisingLite.yaml
+     
+  AdvertisingLite_Domain:
+    behavior: domain
+    interval: 86400
+    name: AdvertisingLite_Domain
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/AdvertisingLite/AdvertisingLite_Domain.yaml
+    
+  Privacy:
+    behavior: classical
+    interval: 86400
+    name: Privacy
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Privacy/Privacy.yaml
+     
+  Privacy_Domain:
+    behavior: domain
+    interval: 86400
+    name: Privacy_Domain
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Privacy/Privacy_Domain.yaml
+
+  Hijacking:
+    behavior: classical
+    interval: 86400
+    name: Hijacking
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Hijacking/Hijacking.yaml
+    
+  Apple:
+    behavior: classical
+    interval: 86400
+    name: Apple
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Apple/Apple.yaml
+    
+  Telegram:
+    behavior: classical
+    interval: 86400
+    name: Telegram
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Telegram/Telegram.yaml
+    
+  YouTube:
+    behavior: classical
+    interval: 86400
+    name: YouTube
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/YouTube/YouTube.yaml
+    
+  Google:
+    behavior: classical
+    interval: 86400
+    name: Google
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Google/Google.yaml
+    
+  Twitter:
+    behavior: classical
+    interval: 86400
+    name: Twitter
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Twitter/Twitter.yaml
+    
+  Facebook:
+    behavior: classical
+    interval: 86400
+    name: Facebook
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Facebook/Facebook.yaml
+    
+  Instagram:
+    behavior: classical
+    interval: 86400
+    name: Instagram
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Instagram/Instagram.yaml
+    
+  GlobalMedia:
+    behavior: classical
+    interval: 86400
+    name: GlobalMedia
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/GlobalMedia/GlobalMedia.yaml
+    
+  GlobalMedia_Domain:
+    behavior: domain
+    interval: 86400
+    name: GlobalMedia_Domain
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/GlobalMedia/GlobalMedia_Domain.yaml
+    
+  Global:
+    behavior: classical
+    interval: 86400
+    name: Global
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Global/Global.yaml
+    
+  Global_Domain:
+    behavior: domain
+    interval: 86400
+    name: Global_Domain
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Global/Global_Domain.yaml
+  
+  China:
+    behavior: classical
+    interval: 86400
+    name: China
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/China/China.yaml
+    
+  China_Domain:
+    behavior: domain
+    interval: 86400
+    name: China_Domain
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/China/China_Domain.yaml
+    
+ 
+    
+    
+rules:
+  # 分流规则引用
+  - RULE-SET,Lan,DIRECT
+  - RULE-SET,Direct,DIRECT
+  - RULE-SET,AdvertisingLite,REJECT
+  - RULE-SET,AdvertisingLite_Domain,REJECT
+  - RULE-SET,Privacy,REJECT
+  - RULE-SET,Privacy_Domain,REJECT
+  - RULE-SET,Hijacking,REJECT
+  - RULE-SET,Apple,Domestic
+  - RULE-SET,Telegram,Auto-Proxy
+  - RULE-SET,YouTube,Manual-Select
+  - RULE-SET,Google,Manual-Select
+  - RULE-SET,Twitter,Manual-Select
+  - RULE-SET,Facebook,Manual-Select
+  - RULE-SET,Instagram,Manual-Select
+  - RULE-SET,GlobalMedia,Manual-Select
+  - RULE-SET,GlobalMedia_Domain,Manual-Select
+  - RULE-SET,Global,Manual-Select
+  - RULE-SET,Global_Domain,Manual-Select
+  - RULE-SET,China,Domestic
+  - RULE-SET,China_Domain,Domestic
+  - RULE-SET,ChinaIPs,Domestic
+  
+  - GEOIP,CN,Domestic
+  - MATCH,Auto-Proxy
