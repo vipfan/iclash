@@ -281,9 +281,19 @@ rule-providers:
     url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Pinduoduo/Pinduoduo.yaml
     path: ./ruleset/Pinduoduo.yaml
 
+  Sina:
+    behavior: classical
+    interval: 86400
+    name: Sina
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Sina/Sina.yaml
+    path: ./ruleset/Sina.yaml
 
-
-
+  NetEase:
+    behavior: classical
+    interval: 86400
+    name: NetEase
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/NetEase/NetEase.yaml
+    path: ./ruleset/NetEase.yaml
 
 
 
@@ -422,8 +432,8 @@ rules:
   - RULE-SET,KuaiShou,Domestic
   - RULE-SET,JingDong,Domestic
   - RULE-SET,Pinduoduo,Domestic
-
-
+  - RULE-SET,Sina,Domestic
+  - RULE-SET,NetEase,Domestic
 
 
 
