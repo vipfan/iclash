@@ -80,7 +80,7 @@ proxy-groups:
     include-all: true
     interval: 120
     lazy: true
-    name: Auto-Select
+    name: AutoSelect
     tolerance: 50
     type: url-test
     url: http://cp.cloudflare.com/generate_204
@@ -89,14 +89,14 @@ proxy-groups:
     include-all: true
     interval: 120
     lazy: true
-    name: Manual-Select
+    name: ManualSelect
     type: select
     url: http://cp.cloudflare.com/generate_204
 
   - icon: https://fastly.jsdelivr.net/gh/Koolson/Qure/IconSet/mini/Proxy.png
-    name: Auto-Proxy
+    name: AutoProxy
     proxies:
-      - Auto-Select
+      - AutoSelect
       - HK 香港
       - TW 台湾
       - SG 新加坡
@@ -111,7 +111,7 @@ proxy-groups:
     name: Domestic
     proxies:
       - DIRECT
-      - Auto-Select
+      - AutoSelect
     type: select
 
 
@@ -322,16 +322,16 @@ rules:
   - RULE-SET,Privacy_Domain,REJECT
   - RULE-SET,Hijacking,REJECT
   - RULE-SET,Apple,Domestic
-  - RULE-SET,Telegram,Auto-Proxy
-  - RULE-SET,YouTube,Manual-Select
-  - RULE-SET,Google,Manual-Select
-  - RULE-SET,Twitter,Manual-Select
-  - RULE-SET,Facebook,Manual-Select
-  - RULE-SET,Instagram,Manual-Select
-  - RULE-SET,GlobalMedia,Manual-Select
-  - RULE-SET,GlobalMedia_Domain,Manual-Select
-  - RULE-SET,Global,Manual-Select
-  - RULE-SET,Global_Domain,Manual-Select
+  - RULE-SET,Telegram,AutoProxy
+  - RULE-SET,YouTube,ManualSelect
+  - RULE-SET,Google,ManualSelect
+  - RULE-SET,Twitter,ManualSelect
+  - RULE-SET,Facebook,ManualSelect
+  - RULE-SET,Instagram,ManualSelect
+  - RULE-SET,GlobalMedia,ManualSelect
+  - RULE-SET,GlobalMedia_Domain,ManualSelect
+  - RULE-SET,Global,ManualSelect
+  - RULE-SET,Global_Domain,ManualSelect
   - RULE-SET,China,Domestic
   - RULE-SET,China_Domain,Domestic
   - RULE-SET,ChinaIPs,Domestic
