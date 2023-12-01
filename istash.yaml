@@ -63,10 +63,6 @@ u: &u {type: url-test, include-all: true, interval: 300, lazy: true, tolerance: 
 
 
 
-
-
-
-
 # 本地代理
 proxies:
 
@@ -105,13 +101,13 @@ proxy-groups:
     name: AutoProxy
     proxies:
       - AutoSelect
-      - HK 香港
-      - TW 台湾
-      - SG 新加坡
-      - KR 韩国
-      - JP 日本
-      - US 美国
-      - OTHER 其它
+      - HK香港
+      - TW台湾
+      - SG新加坡
+      - KR韩国
+      - JP日本
+      - US美国
+      - OTHER其它
       - DIRECT
     type: select
 
