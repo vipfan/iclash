@@ -116,6 +116,14 @@ proxy-groups:
       - AutoSelect
     type: select
 
+  - icon: https://fastly.jsdelivr.net/gh/Koolson/Qure/IconSet/mini/Final.png
+    name: Advertising
+    proxies:
+      - REJECT
+      - DIRECT
+      - AutoSelect
+    type: select 
+
 
   - filter: "港|\U0001F1ED\U0001F1F0|HK|(?i)Hong"
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Hong_Kong.png
@@ -476,11 +484,11 @@ rules:
   # 分流规则引用
   - RULE-SET,Lan,DIRECT
   - RULE-SET,DirectRules,Domestic
-  - RULE-SET,AdvertisingLite,REJECT
-  - RULE-SET,AdvertisingLite_Domain,REJECT
-  - RULE-SET,Privacy,REJECT
-  - RULE-SET,Privacy_Domain,REJECT
-  - RULE-SET,Hijacking,REJECT
+  - RULE-SET,AdvertisingLite,Advertising
+  - RULE-SET,AdvertisingLite_Domain,Advertising
+  - RULE-SET,Privacy,Advertising
+  - RULE-SET,Privacy_Domain,Advertising
+  - RULE-SET,Hijacking,Advertising
   - RULE-SET,Baidu,Domestic
   - RULE-SET,BaiduTieba,Domestic
   - RULE-SET,WeChat,Domestic
