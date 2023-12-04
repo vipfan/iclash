@@ -519,7 +519,9 @@ rules:
   - RULE-SET,Global_Domain,ManualSelect
   - RULE-SET,China,Domestic
   - RULE-SET,China_Domain,Domestic
-
-  
   - GEOIP,CN,Domestic
   - MATCH,AutoProxy
+
+script:
+  shortcuts:
+    quic: network == 'udp' and dst_port == 443
