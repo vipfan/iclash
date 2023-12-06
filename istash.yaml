@@ -484,10 +484,10 @@ rules:
   # 分流规则引用
   - RULE-SET,Lan,DIRECT
   - RULE-SET,DirectRules,Domestic
-  - RULE-SET,AdvertisingLite,Advertising
   - RULE-SET,AdvertisingLite_Domain,Advertising
-  - RULE-SET,Privacy,Advertising
+  - RULE-SET,AdvertisingLite,Advertising
   - RULE-SET,Privacy_Domain,Advertising
+  - RULE-SET,Privacy,Advertising
   - RULE-SET,Hijacking,Advertising
   - RULE-SET,Baidu,Domestic
   - RULE-SET,BaiduTieba,Domestic
@@ -521,12 +521,13 @@ rules:
   - RULE-SET,Twitter,ManualSelect
   - RULE-SET,Facebook,ManualSelect
   - RULE-SET,Instagram,ManualSelect
-  - RULE-SET,GlobalMedia,ManualSelect
   - RULE-SET,GlobalMedia_Domain,ManualSelect
-  - RULE-SET,Global,ManualSelect
+  - RULE-SET,GlobalMedia,ManualSelect
   - RULE-SET,Global_Domain,ManualSelect
-  - RULE-SET,China,Domestic
+  - RULE-SET,Global,ManualSelect
   - RULE-SET,China_Domain,Domestic
+  - RULE-SET,China,Domestic
+
   - GEOIP,CN,Domestic
   - MATCH,AutoProxy
 
