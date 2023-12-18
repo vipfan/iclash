@@ -483,38 +483,38 @@ rule-providers:
 rules:
   # 分流规则引用
   - RULE-SET,Lan,DIRECT
-  - RULE-SET,DirectRules,Domestic
-  - RULE-SET,AdvertisingLite_Domain,Advertising
-  - RULE-SET,AdvertisingLite,Advertising
-  - RULE-SET,Privacy_Domain,Advertising
-  - RULE-SET,Privacy,Advertising
-  - RULE-SET,Hijacking,Advertising
-  - RULE-SET,Baidu,Domestic
-  - RULE-SET,BaiduTieba,Domestic
-  - RULE-SET,WeChat,Domestic
-  - RULE-SET,AliPay,Domestic
-  - RULE-SET,Alibaba_Domain,Domestic
-  - RULE-SET,Alibaba,Domestic
-  - RULE-SET,DouYin,Domestic
-  - RULE-SET,ByteDance,Domestic
-  - RULE-SET,KuaiShou,Domestic
-  - RULE-SET,JingDong,Domestic
-  - RULE-SET,Pinduoduo,Domestic
-  - RULE-SET,Sina,Domestic
-  - RULE-SET,NetEase,Domestic
-  - RULE-SET,Zhihu,Domestic
-  - RULE-SET,XiaoHongShu,Domestic
-  - RULE-SET,DouBan,Domestic
-  - RULE-SET,GaoDe,Domestic
-  - RULE-SET,MeiTuan,Domestic
-  - RULE-SET,Eleme,Domestic
-  - RULE-SET,ChinaMedia,Domestic
-  - RULE-SET,SteamCN,Domestic
-  - RULE-SET,Steam,Domestic
-  - RULE-SET,Epic,Domestic
-  - RULE-SET,Ubisoft,Domestic
-  - RULE-SET,Apple_Domain,Domestic
-  - RULE-SET,Apple,Domestic
+  - RULE-SET,DirectRules,DIRECT
+  - RULE-SET,AdvertisingLite_Domain,REJECT
+  - RULE-SET,AdvertisingLite,AREJECT
+  - RULE-SET,Privacy_Domain,REJECT
+  - RULE-SET,Privacy,REJECT
+  - RULE-SET,Hijacking,REJECT
+  - RULE-SET,Baidu,DIRECT
+  - RULE-SET,BaiduTieba,DIRECT
+  - RULE-SET,WeChat,DIRECT
+  - RULE-SET,AliPay,DIRECT
+  - RULE-SET,Alibaba_Domain,DIRECT
+  - RULE-SET,Alibaba,DIRECT
+  - RULE-SET,DouYin,DIRECT
+  - RULE-SET,ByteDance,DIRECT
+  - RULE-SET,KuaiShou,DIRECT
+  - RULE-SET,JingDong,DIRECT
+  - RULE-SET,Pinduoduo,DIRECT
+  - RULE-SET,Sina,DIRECT
+  - RULE-SET,NetEase,DIRECT
+  - RULE-SET,Zhihu,DIRECT
+  - RULE-SET,XiaoHongShu,DIRECT
+  - RULE-SET,DouBan,DIRECT
+  - RULE-SET,GaoDe,DIRECT
+  - RULE-SET,MeiTuan,DIRECT
+  - RULE-SET,Eleme,DIRECT
+  - RULE-SET,ChinaMedia,DIRECT
+  - RULE-SET,SteamCN,DIRECT
+  - RULE-SET,Steam,DIRECT
+  - RULE-SET,Epic,DIRECT
+  - RULE-SET,Ubisoft,DIRECT
+  - RULE-SET,Apple_Domain,DIRECT
+  - RULE-SET,Apple,DIRECT
   - RULE-SET,Telegram,AutoProxy
   - RULE-SET,YouTube,ManualSelect
   - RULE-SET,Google,ManualSelect
@@ -525,11 +525,11 @@ rules:
   - RULE-SET,GlobalMedia,ManualSelect
   - RULE-SET,Global_Domain,ManualSelect
   - RULE-SET,Global,ManualSelect
-  - RULE-SET,China_Domain,Domestic
-  - RULE-SET,China,Domestic
+  - RULE-SET,China_Domain,DIRECT
+  - RULE-SET,China,DIRECT
 
-  - GEOIP,CN,Domestic
-  - MATCH,AutoProxy
+  - GEOIP,CN,DIRECT
+  - MATCH,ManualSelect
 
 script:
   shortcuts:
