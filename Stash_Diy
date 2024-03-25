@@ -227,9 +227,16 @@ rule-providers:
     interval: 86400
     name: Hijacking
     url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Hijacking/Hijacking.yaml
+
     
-  Apple:
+  Apple_Domain:
     behavior: classical
+    interval: 86400
+    name: Apple_Domain
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Apple/Apple_Domain.yaml   
+
+  Apple:
+    behavior: domain
     interval: 86400
     name: Apple
     url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Apple/Apple.yaml
@@ -313,11 +320,12 @@ rules:
   # 分流规则引用
   - RULE-SET,Lan,DIRECT
   - RULE-SET,Direct,DIRECT
-  - RULE-SET,AdvertisingLite,REJECT
   - RULE-SET,AdvertisingLite_Domain,REJECT
-  - RULE-SET,Privacy,REJECT
+  - RULE-SET,AdvertisingLite,REJECT
   - RULE-SET,Privacy_Domain,REJECT
+  - RULE-SET,Privacy,REJECT
   - RULE-SET,Hijacking,REJECT
+  - RULE-SET,Apple_Domain,Domestic
   - RULE-SET,Apple,Domestic
   - RULE-SET,Telegram,Auto-Proxy
   - RULE-SET,YouTube,Manual-Select
@@ -325,13 +333,13 @@ rules:
   - RULE-SET,Twitter,Manual-Select
   - RULE-SET,Facebook,Manual-Select
   - RULE-SET,Instagram,Manual-Select
-  - RULE-SET,GlobalMedia,Manual-Select
   - RULE-SET,GlobalMedia_Domain,Manual-Select
-  - RULE-SET,Global,Manual-Select
+  - RULE-SET,GlobalMedia,Manual-Select
   - RULE-SET,Global_Domain,Manual-Select
-  - RULE-SET,China,Domestic
+  - RULE-SET,Global,Manual-Select
   - RULE-SET,China_Domain,Domestic
+  - RULE-SET,China,Domestic
   - RULE-SET,ChinaIPs,Domestic
-  
+
   - GEOIP,CN,Domestic
   - MATCH,Auto-Proxy
