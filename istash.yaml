@@ -308,7 +308,6 @@ rules:
   - RULE-SET,Privacy_Domain,REJECT
   - RULE-SET,Privacy,REJECT
   - RULE-SET,Hijacking,REJECT
-  - RULE-SET,Baidu,DIRECT
   - RULE-SET,Telegram,AutoProxy
   - RULE-SET,YouTube,ManualSelect
   - RULE-SET,Google,ManualSelect
