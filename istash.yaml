@@ -212,6 +212,20 @@ rule-providers:
     url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Hijacking/Hijacking.yaml
     path: ./ruleset/Hijacking.yaml
 
+  Apple_Domain:
+    behavior: classical
+    interval: 86400
+    name: Apple_Domain
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Apple/Apple_Domain.yaml
+    path: ./ruleset/Apple_Domain.yaml
+
+  Apple:
+    behavior: domain
+    interval: 86400
+    name: Apple
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Apple/Apple.yaml
+    path: ./ruleset/Apple.yaml
+
   Telegram:
     behavior: classical
     interval: 86400
@@ -308,6 +322,8 @@ rules:
   - RULE-SET,Privacy_Domain,REJECT
   - RULE-SET,Privacy,REJECT
   - RULE-SET,Hijacking,REJECT
+  - RULE-SET,Apple_Domain,DIRECT
+  - RULE-SET,Apple,DIRECT
   - RULE-SET,Telegram,AutoProxy
   - RULE-SET,YouTube,ManualSelect
   - RULE-SET,Google,ManualSelect
