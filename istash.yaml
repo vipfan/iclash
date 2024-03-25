@@ -11,7 +11,7 @@ external-controller: 127.0.0.1:9090  # 外部控制器监听地址，可以使�
 # DNS设置
 dns:
   enable: true
-  ipv6: true
+  ipv6: false
   listen: 0.0.0.0:1053
   # DNS服务器
   default-nameserver:
