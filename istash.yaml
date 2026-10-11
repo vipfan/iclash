@@ -326,7 +326,7 @@ rules:
   - RULE-SET,DirectRules,DIRECT
   - RULE-SET,BlockHttpDNS,DIRECT
   - RULE-SET,AdvertisingLite_Domain,REJECT
-  - RULE-SET,AdvertisingLite,AREJECT
+  - RULE-SET,AdvertisingLite,REJECT
   - RULE-SET,Privacy_Domain,REJECT
   - RULE-SET,Privacy,REJECT
   - RULE-SET,Hijacking,REJECT
